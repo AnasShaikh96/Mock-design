@@ -2,25 +2,27 @@
     justify-content: end;
 }
 
-.elementor-12 .elementor-element.elementor-element-2503c45 > .elementor-element-populated {
-margin-left: 80px;
+.elementor-12 .elementor-element.elementor-element-2503c45>.elementor-element-populated {
+    margin-left: 80px;
 }
 
 ul.accordion-list {
     position: relative;
     display: block;
     width: 100%;
-    height: auto;
+    height: 400px;
     padding: 20px;
     margin: 0;
     list-style: none;
     background-color: #defff0;
 }
+
 ul.accordion-list li {
     position: relative;
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+    overflow: hidden auto;
     background-color: #fff;
     padding: 20px;
     margin: 0 auto 15px auto;
@@ -28,9 +30,24 @@ ul.accordion-list li {
     border-radius: 5px;
     cursor: pointer;
 }
-ul.accordion-list li.active h3:after {
-    transform: rotate(45deg);
+
+ul.accordion-list li::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #eee;
+    background-color: #F5F5F5;
 }
+
+ul.accordion-list li::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+ul.accordion-list li::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+}
+
+/* ul.accordion-list li.active h3:after {
+    transform: rotate(45deg);
+} */
 ul.accordion-list li h3 {
     font-weight: 700;
     position: relative;
@@ -43,24 +60,21 @@ ul.accordion-list li h3 {
     letter-spacing: 0.01em;
     cursor: pointer;
 }
-ul.accordion-list li h3:after {
-    content: "\f278";
-    font-family: "material-design-iconic-font";
-    position: absolute;
-    right: 0;
-    top: 0;
-    color: #fcc110;
-    transition: all 0.3s ease-in-out;
-    font-size: 18px;
-}
+
 ul.accordion-list li div.answer {
     position: relative;
-    display: none;
+    display: block;
     width: 100%;
     height: auto;
     margin: 0;
     padding: 0;
     cursor: pointer;
+}
+ul.accordion-list li.active {
+    display: block; 
+}
+ul.accordion-list li {
+    display: none;
 }
 ul.accordion-list li div.answer p {
     position: relative;
@@ -71,4 +85,12 @@ ul.accordion-list li div.answer p {
     line-height: 150%;
     margin: 0 0 15px 0;
     font-size: 14px;
+}
+
+.bdt-fancy-list-title {
+    cursor: pointer;
+}
+
+.bdt-fancy-list-title.active {
+    font-weight: 700 !important;
 }
