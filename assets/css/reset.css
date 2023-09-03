@@ -88,9 +88,10 @@ ul.accordion-list .accordion_li {
 ul.accordion-list .accordion_li.active .internal_list {
     margin: 0px;
     padding: 10px 15px;
-    list-style-type:"- ";
+    list-style-type: "- ";
     font-size: 14px;
 }
+
 .internal_list li {
     padding-top: 5px;
     line-height: 1.4;
@@ -132,6 +133,34 @@ ul.accordion-list .accordion_li div.answer p {
 .grid_col_2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width : 767px) {
+    .grid_col_2 {
+        grid-template-columns: 1fr;
+    }
+
+    .contact_us_left {
+        margin-bottom: 10px;
+    }
+
+    .elementor-reverse-mobile>.elementor-container>:nth-child(2) {
+        order: 9;
+    }
+
+    .elementor-reverse-mobile>.elementor-container>:first-child {
+        order: 8;
+    }
+
+
+    .elementor-12 .elementor-element.elementor-element-2503c45>.elementor-element-populated {
+        margin-left: 0px;
+        padding-top: 20px;
+    }
+
+    .pt_60 {
+        padding-top: 20px !important;
+    }
 }
 
 .contact_us_left {
