@@ -1,3 +1,9 @@
+:root {
+    --clr-background: #defff0
+}
+
+
+
 .uicore-navbar nav .uicore-nav {
     justify-content: end;
 }
@@ -17,7 +23,7 @@ ul.accordion-list {
     background-color: #defff0;
 }
 
-ul.accordion-list li {
+ul.accordion-list .accordion_li {
     position: relative;
     display: block;
     width: 100%;
@@ -31,24 +37,24 @@ ul.accordion-list li {
     cursor: pointer;
 }
 
-ul.accordion-list li::-webkit-scrollbar-track {
+ul.accordion-list .accordion_li::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px #eee;
     background-color: #F5F5F5;
 }
 
-ul.accordion-list li::-webkit-scrollbar {
+ul.accordion-list .accordion_li::-webkit-scrollbar {
     width: 6px;
     background-color: #F5F5F5;
 }
 
-ul.accordion-list li::-webkit-scrollbar-thumb {
+ul.accordion-list .accordion_li::-webkit-scrollbar-thumb {
     background-color: #ddd;
 }
 
 /* ul.accordion-list li.active h3:after {
     transform: rotate(45deg);
 } */
-ul.accordion-list li h3 {
+ul.accordion-list .accordion_li h3 {
     font-weight: 700;
     position: relative;
     display: block;
@@ -61,7 +67,7 @@ ul.accordion-list li h3 {
     cursor: pointer;
 }
 
-ul.accordion-list li div.answer {
+ul.accordion-list .accordion_li div.answer {
     position: relative;
     display: block;
     width: 100%;
@@ -70,13 +76,28 @@ ul.accordion-list li div.answer {
     padding: 0;
     cursor: pointer;
 }
-ul.accordion-list li.active {
-    display: block; 
+
+ul.accordion-list .accordion_li.active {
+    display: block;
 }
-ul.accordion-list li {
+
+ul.accordion-list .accordion_li {
     display: none;
 }
-ul.accordion-list li div.answer p {
+
+ul.accordion-list .accordion_li.active .internal_list {
+    margin: 0px;
+    padding: 10px 15px;
+    list-style-type:"- ";
+    font-size: 14px;
+}
+.internal_list li {
+    padding-top: 5px;
+    line-height: 1.4;
+
+}
+
+ul.accordion-list .accordion_li div.answer p {
     position: relative;
     display: block;
     font-weight: 300;
@@ -93,4 +114,112 @@ ul.accordion-list li div.answer p {
 
 .bdt-fancy-list-title.active {
     font-weight: 700 !important;
+}
+
+
+.elementor-background-overlay {
+    background-color: var(--clr-background) !important;
+}
+
+.elementor-12 .elementor-element.elementor-element-cfe0451.elementor-column>.elementor-widget-wrap {
+    /* justify-content: start; */
+}
+
+.elementor-12 .elementor-element.elementor-element-40354a7 {
+    /* text-align: left; */
+}
+
+.grid_col_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact_us_left {
+    text-align: left;
+}
+
+
+
+
+.form-input,
+.form-textarea {
+    /* width: 100%; */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.form-textarea {
+    /* width: 100%; */
+    resize: vertical;
+}
+
+.form-button {
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    padding: 15px !important;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px !important;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.form-button:hover {
+    background-color: #0056b3;
+}
+
+/* Additional styling for form containers if needed */
+
+.input-container {
+    display: grid;
+    margin-bottom: 15px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+}
+
+.input_label_wrap {
+    text-align: start;
+    margin-right: 10px;
+}
+
+.input_label_wrap label {
+    text-align: left;
+}
+
+.pt_0 {
+    padding-top: 0px !important;
+}
+
+.pt_60 {
+    padding-top: 60px;
+}
+
+.footer_wrap {
+    color: #fff;
+    padding: 25px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.rights_reserved {
+    font-size: 12px;
+    text-align: right
+}
+
+.footer_wrap .footer_nav_custom ul {
+    display: flex;
+    margin: 0px;
+    align-items: center;
+}
+
+.footer_wrap .footer_nav_custom ul li {
+    list-style-type: none;
+    padding: 0 16px;
 }
