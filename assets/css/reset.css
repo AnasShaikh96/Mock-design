@@ -255,3 +255,11 @@ ul.accordion-list .accordion_li div.answer p {
     list-style-type: none;
     padding: 0 16px;
 }
+
+
+.footer_logo {
+    height: 40px;
+    width: 40px;
+    margin-left: 15px;
+    filter: invert(1);
+}
